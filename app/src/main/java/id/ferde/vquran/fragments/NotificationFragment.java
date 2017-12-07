@@ -1,4 +1,4 @@
-package id.ferde.vquran;
+package id.ferde.vquran.fragments;
 
 
 import android.os.Bundle;
@@ -9,29 +9,31 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import id.ferde.vquran.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends Fragment {
+public class NotificationFragment extends Fragment {
 
-    TextView mTextView;
+    private TextView mTextView;
 
-    public HomeFragment() {
+    public NotificationFragment() {
         // Required empty public constructor
     }
-
     // TODO: Rename and change types and number of parameters
-    public static HomeFragment newInstance() {
-        HomeFragment fragment = new HomeFragment();
+    public static NotificationFragment newInstance() {
+        NotificationFragment fragment = new NotificationFragment();
         return fragment;
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        return inflater.inflate(R.layout.fragment_notification, container, false);
     }
 
     @Override
@@ -40,9 +42,10 @@ public class HomeFragment extends Fragment {
         // retrieve text and color from bundle or savedInstanceState
 
         // initialize views
-        mTextView = (TextView) view.findViewById(R.id.tvHome);
+        mTextView = (TextView) view.findViewById(R.id.tvNotif);
 
         // set text and background color
-        mTextView.setText("HOME Fragment COCOK");
+        mTextView.setText("Notification Fragment COCOK");
     }
+
 }

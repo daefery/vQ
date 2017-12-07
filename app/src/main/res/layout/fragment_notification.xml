@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:id="@+id/contentPanel_Notif"
     android:background="@color/rmb_color"
-    tools:context="id.ferde.vquran.NotificationFragment">
+    tools:context="id.ferde.vquran.fragments.NotificationFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
