@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:id="@+id/contentPanel_Home"
     android:background="@color/record_color"
-    tools:context="id.ferde.vquran.fragments.HomeFragment">
+    tools:context="id.ferde.vquran.fragments.main.HomeFragment">
 
     <TextView
         android:id="@+id/tvHome"

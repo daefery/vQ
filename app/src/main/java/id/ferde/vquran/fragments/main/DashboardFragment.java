@@ -1,4 +1,4 @@
-package id.ferde.vquran.fragments;
+package id.ferde.vquran.fragments.main;
 
 
 import android.os.Bundle;

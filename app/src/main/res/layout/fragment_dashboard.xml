@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:id="@+id/contentPanel_Dashboard"
     android:background="@color/colorAccent"
-    tools:context="id.ferde.vquran.fragments.DashboardFragment">
+    tools:context="id.ferde.vquran.fragments.main.DashboardFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

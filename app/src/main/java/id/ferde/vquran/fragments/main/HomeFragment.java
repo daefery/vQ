@@ -1,7 +1,6 @@
-package id.ferde.vquran.fragments;
+package id.ferde.vquran.fragments.main;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,8 +10,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import id.ferde.vquran.R;
-import id.ferde.vquran.activities.MainActivity;
-import id.ferde.vquran.activities.ReciteActivity;
 
 
 /**

@@ -1,6 +1,5 @@
 package id.ferde.vquran.activities;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -15,14 +14,12 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import id.ferde.vquran.fragments.DashboardFragment;
-import id.ferde.vquran.fragments.HomeFragment;
-import id.ferde.vquran.fragments.NotificationFragment;
+import id.ferde.vquran.fragments.main.DashboardFragment;
+import id.ferde.vquran.fragments.main.HomeFragment;
+import id.ferde.vquran.fragments.main.NotificationFragment;
 import id.ferde.vquran.R;
 
 public class MainActivity extends AppCompatActivity {

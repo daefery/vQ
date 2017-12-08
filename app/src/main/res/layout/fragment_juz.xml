@@ -1,16 +1,14 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/contentPanel_Notif"
-    android:background="@color/rmb_color"
-    tools:context="id.ferde.vquran.fragments.main.NotificationFragment">
+    tools:context="id.ferde.vquran.fragments.recite.JuzFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/tvNotif"
+        android:id="@+id/tvJuz"
         android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+</RelativeLayout>
