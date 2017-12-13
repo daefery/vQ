@@ -13,11 +13,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import id.ferde.vquran.R;
-import id.ferde.vquran.fragments.recite.BookmarkFragment;
-import id.ferde.vquran.fragments.recite.JuzFragment;
-import id.ferde.vquran.fragments.recite.SurahFragment;
+import id.ferde.vquran.fragments.quran.BookmarkFragment;
+import id.ferde.vquran.fragments.quran.JuzFragment;
+import id.ferde.vquran.fragments.quran.SurahFragment;
 
-public class ReciteActivity extends AppCompatActivity {
+public class QuranActivity extends AppCompatActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -37,7 +37,7 @@ public class ReciteActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recite);
+        setContentView(R.layout.activity_quran);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

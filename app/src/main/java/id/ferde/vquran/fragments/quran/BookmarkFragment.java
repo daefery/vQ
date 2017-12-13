@@ -1,4 +1,4 @@
-package id.ferde.vquran.fragments.recite;
+package id.ferde.vquran.fragments.quran;
 
 
 import android.os.Bundle;
@@ -31,7 +31,7 @@ public class BookmarkFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_bookmark, container, false);
+        View rootView = inflater.inflate(R.layout.quran_fragment_bookmark, container, false);
         TextView textView = (TextView) rootView.findViewById(R.id.tvBookmark);
         textView.setText("Bookmark Ajah");
         return rootView;

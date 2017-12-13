@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToRecite(View view){
-        Intent intent = new Intent(this, ReciteActivity.class);
+        Intent intent = new Intent(this, QuranActivity.class);
         startActivity(intent);
     }
 
