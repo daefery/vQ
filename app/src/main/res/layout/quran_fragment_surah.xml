@@ -14,8 +14,23 @@
 
     <ListView
         android:id="@+id/lvSurah"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@null"
+        android:cacheColorHint="#00000000"
+        android:clipChildren="true"
+        android:divider="@null"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:paddingBottom="10dp"
+        android:paddingTop="20dp"
+        android:scrollbars="none"
+        android:smoothScrollbar="true"  >
     </ListView>
 
 

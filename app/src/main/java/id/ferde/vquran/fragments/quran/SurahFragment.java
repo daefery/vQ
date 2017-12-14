@@ -41,7 +41,7 @@ public class SurahFragment extends Fragment {
     private String TAG = SurahFragment.class.getSimpleName();
 
     private ProgressDialog pDialog;
-    ListView lv;
+    ListView lvSurah;
     // URL to get contacts JSON
     private static String url = "http://api.alquran.cloud/surah";//"https://api.androidhive.info/contacts/";
 
@@ -107,15 +107,15 @@ public class SurahFragment extends Fragment {
 
         surahList = new ArrayList<>();
 
-        lv = (ListView)rootView.findViewById(R.id.lvSurah);
-        new GetContacts().execute();
+        lvSurah = (ListView)rootView.findViewById(R.id.lvSurah);
+        new GetSurahList().execute();
         return rootView;
     }
 
     /**
      * Async task class to get json by making HTTP call
      */
-    private class GetContacts extends AsyncTask<Void, Void, Void> {
+    private class GetSurahList extends AsyncTask<Void, Void, Void> {
 
         @Override
         protected void onPreExecute() {
@@ -242,43 +242,42 @@ public class SurahFragment extends Fragment {
 
             BindDictionary<Surah> dict = new BindDictionary<>();
 
-//            dict.addStringField(R.id.tvNumberSurah, new StringExtractor<Surah>() {
-//                @Override
-//                public String getStringValue(Surah item, int position) {
-//                    return ""+item.number;
-//                }
-//            });
-//
-//            dict.addStringField(R.id.tvNameSurah, new StringExtractor<Surah>() {
-//                @Override
-//                public String getStringValue(Surah item, int position) {
-//                    return item.englishName;
-//                }
-//            });
-//
-//            dict.addStringField(R.id.tvDescSurah, new StringExtractor<Surah>() {
-//                @Override
-//                public String getStringValue(Surah item, int position) {
-//                    return item.revelationType+" | "+item.numberOfAyahs+" Ayah";
-//                }
-//            });
-//
-//            dict.addStringField(R.id.tvArabia, new StringExtractor<Surah>() {
-//                @Override
-//                public String getStringValue(Surah item, int position) {
-//                    return item.name;
-//                }
-//            });
+            dict.addStringField(R.id.tvSurahNumber, new StringExtractor<Surah>() {
+                @Override
+                public String getStringValue(Surah item, int position) {
+                    return ""+item.number;
+                }
+            });
+
+            dict.addStringField(R.id.tvSurahName, new StringExtractor<Surah>() {
+                @Override
+                public String getStringValue(Surah item, int position) {
+                    return item.englishName;
+                }
+            });
+
+            dict.addStringField(R.id.tvSurahDesc, new StringExtractor<Surah>() {
+                @Override
+                public String getStringValue(Surah item, int position) {
+                    return item.revelationType+" | "+item.numberOfAyahs+" Ayah";
+                }
+            });
+
+            dict.addStringField(R.id.tvSurahArab, new StringExtractor<Surah>() {
+                @Override
+                public String getStringValue(Surah item, int position) {
+                    return item.name;
+                }
+            });
 
             FunDapter adapter = new FunDapter(SurahFragment.this.getActivity(), surahList, R.layout.quran_surahlist_layout, dict);
 
-            lv.setAdapter(adapter);
-
-            lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            lvSurah.setAdapter(adapter);
+            lvSurah.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                    Surah selectedSurah = surahList.get(position);
-                    Toast.makeText(SurahFragment.this.getActivity(), selectedSurah.englishName, Toast.LENGTH_SHORT).show();
+                    Surah selectedProduct = surahList.get(position);
+                    Toast.makeText(SurahFragment.this.getActivity(), selectedProduct.englishName, Toast.LENGTH_SHORT).show();
                 }
             });
         }

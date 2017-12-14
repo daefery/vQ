@@ -111,20 +111,15 @@ public class QuranActivity extends AppCompatActivity {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
 
-            Fragment frag = null;
             switch (position){
                 case 0:
-                    frag = SurahFragment.newInstance();
-                    break;
+                    return new SurahFragment();
                 case 1:
-                    frag = JuzFragment.newInstance();
-                    break;
+                    return new JuzFragment();
                 case 2:
-                    frag = BookmarkFragment.newInstance();
-                    break;
+                    return new BookmarkFragment();
             }
-            return frag;
-//            return SurahFragment.newInstance();
+            return null;
         }
 
         @Override
